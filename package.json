@@ -23,6 +23,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "webfonts-generator": "^0.4.0"
+    "fantasticon": "^4.1.0"
   }
 }

@@ -1,0 +1,21 @@
+@font-face {
+	font-family: "{{ name }}";
+	src: {{{ fontSrc }}};
+}
+
+.{{ prefix }} {
+	line-height: 1;
+}
+
+.{{ prefix }}:before {
+	font-family: {{ name }} !important;
+	font-style: normal;
+	font-weight: normal !important;
+	vertical-align: top;
+}
+
+{{# each codepoints }}
+.{{ ../prefix }}-{{ @key }}:before {
+	content: "\\{{ codepoint this }}";
+}
+{{/ each }}
